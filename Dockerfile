@@ -1,7 +1,7 @@
 # node-gyp依赖python环境
 FROM gastrodia/python
 RUN apt update
-RUN apt install git nohup -y
+RUN apt-get install git nohup -y
 RUN git clone https://github.com/gastrodia/external-tools.git /containers
 WORKDIR /container/AtomSpaceExplorer
 RUN npm install
