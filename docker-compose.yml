@@ -1,0 +1,13 @@
+#https://stackoverflow.com/questions/20845056/how-can-i-expose-more-than-1-port-with-docker
+#https://github.com/docker/compose/pull/1827
+version: '2.0'
+
+services:
+  opencog-external-tools:
+    image: gastrodia/opencog-external-tools
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: development
+      PORT: 8080
